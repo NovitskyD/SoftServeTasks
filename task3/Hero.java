@@ -2,7 +2,7 @@ package softserve.task3;
 
 import java.util.Random;
 
-public abstract class Hero implements IsAlive {
+public abstract class Hero implements Mortal {
     protected String name;
     protected int Health;
     protected Random random;
@@ -14,6 +14,7 @@ public abstract class Hero implements IsAlive {
     public String getName() {
         return name;
     }
+    @Override
     public boolean isAlive() {
         if(Health > 0){
             return true;
@@ -21,6 +22,7 @@ public abstract class Hero implements IsAlive {
         else return false;
     }
 
+    @Override
     public void showHealth() {
         if (isAlive()) {
             System.out.println("Health left: " + Health);

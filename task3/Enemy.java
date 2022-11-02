@@ -18,6 +18,7 @@ public class Enemy implements Mortal{
         this.health = health;
     }
 
+    @Override
     public void showHealth() {
         if (isAlive()) {
             System.out.println("Health left: " + health);
