@@ -15,9 +15,11 @@ public class BattleGround {
 
     public static void attack(Hero hero){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("--------------");
         System.out.println("Attack the enemy?: ");
         System.out.println("Yes = 1\t No = 2");
         int scan2 = scanner.nextInt();
+        System.out.println("-------FIGHT-------");
         if(scan2 == 1){
             hero.attackEnemy();
         }

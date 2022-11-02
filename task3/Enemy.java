@@ -22,7 +22,9 @@ public class Enemy implements Mortal{
         if (isAlive()) {
             System.out.println("Health left: " + health);
         }
-        else System.out.println("Health left: " + 0);
+        else {System.out.println("Health left: " + 0);
+            System.out.println("\nHero WIN");
+        System.exit(0);}
     }
 
     public void takeDamage(int damage){

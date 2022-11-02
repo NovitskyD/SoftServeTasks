@@ -1,7 +1,11 @@
 package softserve.task3;
 
-public abstract class Hero {
+import java.util.Random;
+
+public abstract class Hero implements IsAlive {
     protected String name;
+    protected int Health;
+    protected Random random;
 
     public Hero(String name) {
         this.name = name;
@@ -10,6 +14,23 @@ public abstract class Hero {
     public String getName() {
         return name;
     }
+    public boolean isAlive() {
+        if(Health > 0){
+            return true;
+        }
+        else return false;
+    }
+
+    public void showHealth() {
+        if (isAlive()) {
+            System.out.println("Health left: " + Health);
+        } else {
+            System.out.println("Health left: " + 0);
+            System.out.println("\nEnemy WIN");
+            System.exit(0);
+        }
+    }
 
     public abstract void attackEnemy();
+    public abstract void takeDamage();
 }
